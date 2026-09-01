@@ -44,7 +44,7 @@ body {
 /* พื้นที่แสดงเนื้อหา */
 .page-container {
     width: 90%;
-    max-width: 600px; /* จำกัดความกว้างรวมไม่ให้กว้างเกินไป */
+    max-width: 250px; /* จำกัดความกว้างรวมไม่ให้กว้างเกินไป */
     margin: 25px auto;
     padding: 0 10px;
     text-align: center;
