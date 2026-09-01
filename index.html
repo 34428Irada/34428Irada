@@ -3,30 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - แนะนำตัว</title>
+    <title>Portfolio - Chayamorn Paenoi</title>
     <link rel="stylesheet" href="style.css">
+    <!-- ไอคอน Fonts (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="#home">หน้าแรก</a>
-        <a href="#about">คำนำ</a>
-        <a href="#profile">ประวัติส่วนตัว</a>
-        <a href="#education">ประวัติการศึกษา</a>
-        <a href="#activities">กิจกรรมที่เข้าร่วม</a>
+    <!-- แถบเมนูด้านบนพร้อมปุ่ม Hamburger -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <button class="menu-btn" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <span class="site-title">Chayamorn Paenoi</span>
+        </div>
     </nav>
 
-    <header id="home" class="header-section">
-        <img src="banner.jpg" alt="รูปกิจกรรม" class="banner-img">
-        <p class="caption">รูปภาพจากงานกิจกรรม</p>
-    </header>
+    <!-- เมนูด้านข้าง (Sidebar Menu) แบบในรูปภาพแรก -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul class="sidebar-links">
+            <li><a href="#home" onclick="toggleSidebar()">หน้าปก</a></li>
+            <li><a href="#foreword" onclick="toggleSidebar()">คำนำ</a></li>
+            <li><a href="#profile" onclick="toggleSidebar()">ประวัติส่วนตัว</a></li>
+            <li><a href="#education" onclick="toggleSidebar()">ประวัติการศึกษา</a></li>
+            <li><a href="#interest" onclick="toggleSidebar()">ความสนใจในการศึกษาต่อ</a></li>
+            <li><a href="#activities" onclick="toggleSidebar()">กิจกรรมที่เข้าร่วม</a></li>
+            <li><a href="#skills" onclick="toggleSidebar()">ความสามารถพิเศษ</a></li>
+            <li><a href="#contact" onclick="toggleSidebar()">ช่องทางการติดต่อ</a></li>
+        </ul>
+    </div>
 
-    <main class="content">
-        <h1>นางสาวไอรดา งามสง่า (ไอ)</h1>
-        <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
-        <h3>สายการเรียน เตียมวิศวะ</h3>
-        <h3>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h3>
-    </main>
+    <!-- ฉากหลังสีดำเมื่อเปิด Sidebar -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
+    <div class="main-container">
+
+        <!-- 1. หน้าปก / แนะนำตัว -->
+        <section id="home" class="section">
+            <h1 class="page-title">แนะนำตัว</h1>
+            
+            <div class="image-wrapper">
+                <img src="banner.jpg" alt="รูปภาพกิจกรรม" class="main-img">
+                <p class="img-caption">รูปภาพจากงาน RAI Frontier 2025 CAMP @KORAT</p>
+            </div>
+
+            <div class="bio-info">
+                <h2>นางสาวชยามร แป้นน้อย (นาขวัญ)</h2>
+                <h3>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h3>
+                <h3>สายการเรียน GIFTED</h3>
+                <h3>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h3>
+            </div>
+        </section>
+
+        <!-- 2. คำนำ -->
+        <section id="foreword" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-book-open"></i> คำนำ</h2>
+            <p class="text-content">
+                แฟ้มสะสมผลงาน (Portfolio) เล่มนี้ จัดทำขึ้นเพื่อนำเสนอข้อมูลเกี่ยวกับประวัติส่วนตัว ประวัติการศึกษา ผลงาน กิจกรรม และความสามารถพิเศษของข้าพเจ้า โดยมุ่งหวังให้ผู้ประเมินได้เห็นถึงความตั้งใจ ความมุ่งมั่น และความพร้อมในการศึกษาต่อในระดับอุดมศึกษา
+            </p>
+        </section>
+
+        <!-- 3. ประวัติส่วนตัว -->
+        <section id="profile" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-user"></i> ประวัติส่วนตัว</h2>
+            <ul class="info-list">
+                <li><strong>ชื่อ-นามสกุล:</strong> นางสาวชยามร แป้นน้อย (นาขวัญ)</li>
+                <li><strong>ระดับการศึกษา:</strong> มัธยมศึกษาปีที่ 6</li>
+                <li><strong>แผนการเรียน:</strong> GIFTED (โครงการห้องเรียนพิเศษ)</li>
+                <li><strong>โรงเรียน:</strong> บ้านบึง "อุตสาหกรรมนุเคราะห์"</li>
+            </ul>
+        </section>
+
+        <!-- 4. ประวัติการศึกษา -->
+        <section id="education" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> ประวัติการศึกษา</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>มัธยมศึกษาตอนปลาย (ม.4 - ม.6)</h4>
+                    <p>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์" (สายการเรียน GIFTED)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ความสนใจในการศึกษาต่อ -->
+        <section id="interest" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-heart"></i> ความสนใจในการศึกษาต่อ</h2>
+            <p class="text-content">
+                มีความสนใจเข้าศึกษาต่อ ณ <strong>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)</strong> เพื่อพัฒนาทักษะและความรู้ในสาขาวิชาที่มุ่งมั่น
+            </p>
+        </section>
+
+        <!-- 6. กิจกรรมที่เข้าร่วม -->
+        <section id="activities" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-trophy"></i> กิจกรรมที่เข้าร่วม</h2>
+            <div class="activity-item">
+                <p>เข้าร่วมกิจกรรม <strong>RAI Frontier 2025 CAMP @KORAT</strong></p>
+                <!-- ใส่รูปภาพกิจกรรมเพิ่มตรงนี้ได้ -->
+            </div>
+        </section>
+
+        <!-- 7. ความสามารถพิเศษ -->
+        <section id="skills" class="section card">
+            <h2 class="section-title"><i class="fa-solid fa-star"></i> ความสามารถพิเศษ</h2>
+            <ul class="skills-list">
+                <li>การแก้ปัญหาเฉพาะหน้าและการทำงานเป็นทีม</li>
+                <li>ทักษะด้านวิชาการตามหลักสูตร GIFTED</li>
+            </ul>
+        </section>
+
+        <!-- 8. ช่องทางการติดต่อ (ข้อมูลตามรูปภาพจริง) -->
+        <section id="contact" class="section card contact-card">
+            <h2 class="section-title"><i class="fa-solid fa-address-book"></i> ช่องทางการติดต่อ</h2>
+            
+            <div class="contact-item">
+                <span class="label">Instagram :</span>
+                <a href="https://instagram.com/alpha_yahcuras" target="_blank" class="value link-highlight">alpha_yahcuras</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Facebook :</span>
+                <span class="value">Chayamorn Paenoi</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Gmail :</span>
+                <div class="email-group">
+                    <a href="mailto:chayamorn36642@banbung.ac.th" class="value link-highlight">chayamorn36642@banbung.ac.th</a>
+                    <a href="mailto:chayamonpaenoi10052550@gmail.com" class="value link-highlight">chayamonpaenoi10052550@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- สคริปต์เปิด-ปิด Sidebar Menu -->
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
