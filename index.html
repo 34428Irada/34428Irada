@@ -4,11 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>หน้าแรก - Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Tahoma', 'Sarabun', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #AC3520;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 3px;
+            white-space: nowrap;
+        }
+        .navbar a:hover, .navbar a.active {
+            background-color: #7d2313;
+        }
+        .page-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 0 10px;
+            text-align: center;
+        }
+        .heading {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #AC3520;
+        }
+        .profile-card, .contact-box {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid #AC3520;
+            text-align: center;
+        }
+        /* ล็อกขนาดรูปภาพให้พอดีหน้าจอชัวร์ 100% */
+        .profile-img {
+            width: 100% !important;
+            max-width: 280px !important; /* ปรับขนาดความกว้างรูปไม่เกิน 280px */
+            height: auto !important;
+            display: block !important;
+            margin: 0 auto 15px auto !important;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .img-caption {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .profile-details h2 {
+            font-size: 20px;
+            color: #111;
+            margin-bottom: 8px;
+        }
+        .profile-details h3 {
+            font-size: 16px;
+            color: #444;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        .contact-box {
+            text-align: left;
+        }
+        .contact-box h2 {
+            font-size: 18px;
+            color: #AC3520;
+            margin-bottom: 15px;
+        }
+        .contact-box p {
+            margin-bottom: 10px;
+            font-size: 15px;
+            word-break: break-word;
+        }
+        .contact-box a {
+            color: #0077cc;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- แถบเมนูด้านบน -->
     <nav class="navbar">
         <a href="index.html" class="active">หน้าปก</a>
         <a href="foreword.html">คำนำ</a>
@@ -19,28 +118,28 @@
         <a href="skills.html">ความสามารถพิเศษ</a>
     </nav>
 
-    <!-- เนื้อหาหน้าแรก -->
     <main class="page-container">
         <h1 class="heading">แนะนำตัว</h1>
         
         <div class="profile-card">
-            <img src="banner.jpg" alt="รูปโปรไฟล์"  style="max-width: 280px; width: 100%; height: auto; display: block; margin: 0 auto 15px auto; border-radius: 8px;">
+            <!-- บังคับขนาดภาพด้วย style ตรงๆ เพื่อแก้ปัญหารูปใหญ่ล้นจอ -->
+            <img src="banner.jpg" alt="รูปโปรไฟล์" class="profile-img" style="width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto 15px auto; border-radius: 8px;">
+            <p class="img-caption">รูปภาพจากงาน RAI Frontier 2025 CAMP @KORAT</p>
             
             <div class="profile-details">
-                <h2>นางสาวไอรดา งามสง่า (ไอ)</h2>
+                <h2>นางสาวชยามร แป้นน้อย (นาขวัญ)</h2>
                 <h3>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h3>
-                <h3>สายการเรียน เตรียมวิศวะ</h3>
+                <h3>สายการเรียน GIFTED</h3>
                 <h3>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</h3>
             </div>
         </div>
 
-        <!-- ช่องทางการติดต่อ อยู่เฉพาะหน้าแรก -->
         <section class="contact-box">
             <h2>ช่องทางการติดต่อ</h2>
-            <p><strong>Instagram :</strong> <a href="https://instagram.com/alpha_yahcuras" target="_blank">kirama_637</a></p>
-            <p><strong>Facebook :</strong> Irada Ngamsanga</p>
-            <p><strong>Gmail :</strong> <a href="mailto:chayamorn36642@banbung.ac.th">s34428@banbung.ac.th</a></p>
-            <p><strong>Gmail (ส่วนตัว) :</strong> <a href="mailto:chayamonpaenoi10052550@gmail.com">iradangamsanga@gmail.com</a></p>
+            <p><strong>Instagram :</strong> <a href="https://instagram.com/alpha_yahcuras" target="_blank">alpha_yahcuras</a></p>
+            <p><strong>Facebook :</strong> Chayamorn Paenoi</p>
+            <p><strong>Gmail :</strong> <a href="mailto:chayamorn36642@banbung.ac.th">chayamorn36642@banbung.ac.th</a></p>
+            <p><strong>Gmail (ส่วนตัว) :</strong> <a href="mailto:chayamonpaenoi10052550@gmail.com">chayamonpaenoi10052550@gmail.com</a></p>
         </section>
     </main>
 
