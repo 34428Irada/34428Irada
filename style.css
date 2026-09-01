@@ -1,44 +1,119 @@
-body {
-    font-family: 'Tahoma', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f9f9f9;
 }
 
+body {
+    font-family: 'Tahoma', 'Sarabun', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* แถบเมนูด้านบน สีแดงหมากสุก มจพ. */
 .navbar {
-    background-color: #00bcd4;
-    padding: 15px;
+    background-color: #AC3520;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
     position: sticky;
     top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 100;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    padding: 8px 14px;
+    font-size: 15px;
     font-weight: bold;
+    border-radius: 4px;
+    transition: 0.2s;
 }
 
-.banner-img {
-    width: 80%;
-    max-width: 800px;
-    margin-top: 20px;
+.navbar a:hover, .navbar a.active {
+    background-color: #7d2313;
+}
+
+/* พื้นที่แสดงเนื้อหา */
+.page-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #AC3520;
+}
+
+/* กล่องเนื้อหา */
+.profile-card, .content-card, .contact-box {
+    background: #ffffff;
     border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 4px solid #AC3520;
+    text-align: left;
 }
 
-.caption {
+.profile-card {
+    text-align: center;
+}
+
+.profile-img, .content-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.img-caption {
     font-size: 14px;
     color: #666;
+    margin-bottom: 20px;
 }
 
-.content h1 {
-    font-size: 28px;
-    margin-top: 30px;
+.profile-details h2 {
+    font-size: 22px;
+    color: #111;
+    margin-bottom: 8px;
 }
 
-.content h2, .content h3 {
-    font-size: 20px;
-    color: #333;
+.profile-details h3 {
+    font-size: 17px;
+    color: #444;
     font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.contact-box h2 {
+    font-size: 20px;
+    color: #AC3520;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+.contact-box a {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
