@@ -8,15 +8,17 @@ body {
     font-family: 'Tahoma', 'Sarabun', sans-serif;
     background-color: #f8f9fa;
     color: #333;
+    overflow-x: hidden; /* ป้องกันหน้าจอล้นออกด้านข้าง */
 }
 
-/* แถบเมนูด้านบน สีแดงหมากสุก มจพ. */
+/* แถบเมนูด้านบน */
 .navbar {
     background-color: #AC3520;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 10px 0;
+    padding: 10px 15px;
     position: sticky;
     top: 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -26,11 +28,13 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 8px 14px;
-    font-size: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
     transition: 0.2s;
+    margin: 3px;
+    white-space: nowrap;
 }
 
 .navbar a:hover, .navbar a.active {
@@ -39,14 +43,15 @@ body {
 
 /* พื้นที่แสดงเนื้อหา */
 .page-container {
-    max-width: 300px;
-    margin: 30px auto;
-    padding: 0 15px;
+    width: 90%;
+    max-width: 600px; /* จำกัดความกว้างรวมไม่ให้กว้างเกินไป */
+    margin: 25px auto;
+    padding: 0 10px;
     text-align: center;
 }
 
 .heading {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 20px;
     color: #AC3520;
 }
@@ -55,7 +60,7 @@ body {
 .profile-card, .content-card, .contact-box {
     background: #ffffff;
     border-radius: 8px;
-    padding: 25px;
+    padding: 20px;
     margin-bottom: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     border-top: 4px solid #AC3520;
@@ -66,41 +71,47 @@ body {
     text-align: center;
 }
 
+/* แก้ไขจุดสำคัญ: บังคับให้รูปย่อขนาดพอดีจอมือถือและจอคอม */
 .profile-img, .content-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    width: 100% !important;
+    max-width: 300px !important; /* จำกัดขนาดความกว้างรูปไม่เกิน 300px */
+    height: auto !important; /* คงสัดส่วนภาพ ไม่ให้เบี้ยว */
+    max-height: 400px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .img-caption {
-    font-size: 14px;
+    font-size: 13px;
     color: #666;
     margin-bottom: 20px;
 }
 
 .profile-details h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #111;
     margin-bottom: 8px;
 }
 
 .profile-details h3 {
-    font-size: 17px;
+    font-size: 16px;
     color: #444;
     font-weight: normal;
     margin-bottom: 5px;
 }
 
 .contact-box h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #AC3520;
     margin-bottom: 15px;
 }
 
 .contact-box p {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
     word-break: break-word;
 }
 
@@ -115,5 +126,5 @@ ul {
 
 li {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 15px;
 }
