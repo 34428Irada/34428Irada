@@ -179,4 +179,124 @@ ul li::before {
     .content-card p {
         font-size: 16px;
     }
+
+    /* ==========================================
+   ส่วนตกแต่งเพิ่มเติมสำหรับหน้า "ความสนใจในการศึกษาต่อ"
+   ========================================== */
+
+/* ยกเลิกการย่อหน้าบรรทัดแรกสำหรับเลย์เอาต์ใหม่ */
+.content-card .education-goal-container p {
+    text-indent: 0;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.education-goal-container {
+    text-align: left;
+    line-height: 1.7;
+    color: #2c3e50;
+}
+
+/* การ์ดเน้นมหาวิทยาลัย/สาขา */
+.target-card {
+    display: flex;
+    align-items: center;
+    background-color: #fdf5f4; /* สีแดงอ่อนจางๆ สบายตา */
+    border-left: 5px solid #AC3520; /* สีแดงหมากสุก มจพ. */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(172, 53, 32, 0.08);
+}
+
+.target-card .icon {
+    font-size: 38px;
+    margin-right: 18px;
+    line-height: 1;
+}
+
+.target-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    color: #AC3520;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.university-name {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.sub-university {
+    margin-top: 4px;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* หัวข้อย่อย */
+.education-goal-container h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #AC3520;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.bullet-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.reason-section, .experience-section, .future-section {
+    margin-bottom: 22px;
+}
+
+/* ปรับแต่งรายการจุด (List) เฉพาะในส่วนทักษะ */
+.skills-list {
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.skills-list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+}
+
+.skills-list li::before {
+    content: "▸"; /* ใช้หัวข้อลูกศรสวยงาม */
+    color: #AC3520;
+    font-size: 18px;
+    top: -1px;
+}
+
+/* เน้นคำสำคัญ */
+.education-goal-container strong {
+    color: #AC3520;
+    font-weight: 700;
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .target-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .target-card .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .university-name {
+        font-size: 17px;
+    }
+    .sub-university {
+        font-size: 14px;
+    }
+}
 }
