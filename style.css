@@ -180,56 +180,58 @@ ul li::before {
         font-size: 16px;
     }
 
- /* ==========================================
-   ส่วนจัดระเบียบหน้า ความสนใจในการศึกษาต่อ
+/* ==========================================
+   สไตล์กรอบเป้าหมายการศึกษาแบบจัดกึ่งกลาง
    ========================================== */
 
+/* ข้อความในกรอบแรก */
 .interest-paragraph {
     font-size: 18px;
     color: #333333;
     text-align: justify;
     text-indent: 2.5em;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin: 0;
 }
 
-/* การ์ดเป้าหมายการศึกษา */
-.target-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fdf5f4;
-    border: 1px solid #f2d6d1;
-    border-left: 6px solid #AC3520;
-    padding: 25px 30px;
+/* กรอบแยกเป้าหมายการศึกษา */
+.target-card-center {
+    background: #ffffff;
     border-radius: 12px;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(172, 53, 32, 0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-top: 5px solid #AC3520;
+    text-align: center; /* จัดเนื้อหาทั้งหมดตรงกลาง */
 }
 
-.target-details {
-    flex: 1;
-    text-align: left;
-}
-
-.target-details h3 {
-    font-size: 16px;
+.target-card-center h3 {
+    font-size: 20px;
     color: #AC3520;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.faculty-name {
+/* ตรามหาวิทยาลัยอยู่ตรงกลาง */
+.university-logo-center {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+/* ลำดับข้อความ คณะ สาขา มหาลัย */
+.target-card-center .faculty-name {
     font-size: 20px;
     font-weight: bold;
     color: #2c3e50;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     text-indent: 0 !important;
 }
 
-.department-name {
+.target-card-center .department-name {
     font-size: 18px;
     font-weight: 600;
     color: #AC3520;
@@ -237,40 +239,38 @@ ul li::before {
     text-indent: 0 !important;
 }
 
-.university-name {
+.target-card-center .university-name {
     font-size: 16px;
     color: #555555;
     margin-bottom: 0;
     text-indent: 0 !important;
 }
 
-.university-logo-box {
-    margin-left: 20px;
-    flex-shrink: 0;
-}
-
-.university-logo {
-    width: 90px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
-}
-
+/* รองรับมือถือ */
 @media (max-width: 600px) {
-    .target-card {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 20px;
+    .target-card-center {
+        padding: 20px 15px;
     }
-    .target-details {
-        text-align: center;
+    .university-logo-center {
+        width: 70px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px auto;
+        filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .university-logo-center {
+        width: 55px; /* ขนาดรูปในมือถือ */
     }
-    .university-logo-box {
-        margin-left: 0;
-        margin-bottom: 15px;
+}
     }
-    .university-logo {
-        width: 75px;
+    .target-card-center .faculty-name {
+        font-size: 18px;
+    }
+    .target-card-center .department-name {
+        font-size: 16px;
     }
 }
