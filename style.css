@@ -180,123 +180,99 @@ ul li::before {
         font-size: 16px;
     }
 
-    /* ==========================================
+  /* ==========================================
    ส่วนตกแต่งเพิ่มเติมสำหรับหน้า "ความสนใจในการศึกษาต่อ"
    ========================================== */
 
-/* ยกเลิกการย่อหน้าบรรทัดแรกสำหรับเลย์เอาต์ใหม่ */
-.content-card .education-goal-container p {
-    text-indent: 0;
-    text-align: left;
-    margin-bottom: 0;
+.interest-text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #333333;
+    text-align: justify;
+    text-indent: 2.5em;
+    line-height: 1.8;
 }
 
-.education-goal-container {
-    text-align: left;
-    line-height: 1.7;
-    color: #2c3e50;
-}
-
-/* การ์ดเน้นมหาวิทยาลัย/สาขา */
+/* การ์ดเน้นเป้าหมายด้านล่าง */
 .target-card {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #fdf5f4; /* สีแดงอ่อนจางๆ สบายตา */
-    border-left: 5px solid #AC3520; /* สีแดงหมากสุก มจพ. */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(172, 53, 32, 0.08);
+    background-color: #fdf5f4;
+    border: 1px solid #f2d6d1;
+    border-left: 6px solid #AC3520;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(172, 53, 32, 0.08);
 }
 
-.target-card .icon {
-    font-size: 38px;
-    margin-right: 18px;
-    line-height: 1;
+.target-details {
+    flex: 1;
+    text-align: left;
 }
 
-.target-card h3 {
-    margin: 0 0 4px 0;
-    font-size: 14px;
+.target-details h3 {
+    font-size: 15px;
     color: #AC3520;
+    margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
 }
 
-.university-name {
-    font-size: 19px;
+.faculty-name {
+    font-size: 20px;
     font-weight: bold;
-    margin: 0;
-    color: #1a1a1a;
+    color: #2c3e50;
+    margin-bottom: 2px;
+    text-indent: 0 !important;
 }
 
-.sub-university {
-    margin-top: 4px;
+.department-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #AC3520;
+    margin-bottom: 6px;
+    text-indent: 0 !important;
+}
+
+.university-name {
     font-size: 16px;
     color: #555555;
+    margin-bottom: 0;
+    text-indent: 0 !important;
 }
 
-/* หัวข้อย่อย */
-.education-goal-container h4 {
-    margin: 0 0 8px 0;
-    font-size: 18px;
-    color: #AC3520;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+.university-logo-box {
+    margin-left: 20px;
+    flex-shrink: 0;
 }
 
-.bullet-icon {
-    margin-right: 8px;
-    font-size: 18px;
+.university-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
 }
 
-.reason-section, .experience-section, .future-section {
-    margin-bottom: 22px;
-}
-
-/* ปรับแต่งรายการจุด (List) เฉพาะในส่วนทักษะ */
-.skills-list {
-    padding-left: 0;
-    margin-top: 8px;
-}
-
-.skills-list li {
-    font-size: 16px;
-    margin-bottom: 8px;
-    padding-left: 24px;
-}
-
-.skills-list li::before {
-    content: "▸"; /* ใช้หัวข้อลูกศรสวยงาม */
-    color: #AC3520;
-    font-size: 18px;
-    top: -1px;
-}
-
-/* เน้นคำสำคัญ */
-.education-goal-container strong {
-    color: #AC3520;
-    font-weight: 700;
-}
-
-/* รองรับหน้าจอมือถือ */
 @media (max-width: 600px) {
     .target-card {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
-        padding: 15px;
+        padding: 20px;
     }
-    .target-card .icon {
-        margin-right: 0;
-        margin-bottom: 10px;
+    
+    .target-details {
+        text-align: center;
     }
-    .university-name {
-        font-size: 17px;
+
+    .university-logo-box {
+        margin-left: 0;
+        margin-bottom: 15px;
     }
-    .sub-university {
-        font-size: 14px;
+    
+    .university-logo {
+        width: 80px;
     }
-}
 }
