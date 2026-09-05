@@ -321,3 +321,73 @@ ul li::before {
     .target-text-group .department-name { font-size: 17px; }
     .target-text-group .university-name { font-size: 15px; }
 }
+/* ==========================================
+   จัดข้อความเป้าหมายการศึกษาให้อยู่บรรทัดเดียวกัน
+   ========================================== */
+
+.target-card-center {
+    text-align: center !important;
+}
+
+.target-card-center h3 {
+    font-size: 24px;
+    color: #AC3520;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center !important;
+}
+
+/* ขนาดตรามหาวิทยาลัยใหญ่ชัดเจน */
+.university-logo-center {
+    width: 200px !important;
+    max-width: 200px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block !important;
+    margin: 0 auto 20px auto !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+}
+
+/* ข้อความ คณะ สาขา มหาลัย อยู่บรรทัดเดียวกันแบบ inline */
+.target-text-single-line {
+    text-align: center !important;
+    text-indent: 0 !important;
+    line-height: 1.8 !important;
+    margin: 0 !important;
+}
+
+.target-text-single-line .faculty-name {
+    font-size: 19px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: inline;
+    margin-right: 8px;
+}
+
+.target-text-single-line .department-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: #AC3520;
+    display: inline;
+    margin-right: 8px;
+}
+
+.target-text-single-line .university-name {
+    font-size: 18px;
+    color: #555555;
+    display: inline;
+}
+
+/* รองรับมือถือ (หากหน้าจอแคบ ข้อความจะตัดบรรทัดให้อัตโนมัติอย่างสมส่วน) */
+@media (max-width: 768px) {
+    .university-logo-center {
+        width: 150px !important;
+        max-width: 150px !important;
+    }
+    .target-text-single-line .faculty-name,
+    .target-text-single-line .department-name,
+    .target-text-single-line .university-name {
+        font-size: 16px;
+    }
+}
