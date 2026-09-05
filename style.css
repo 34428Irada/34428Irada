@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Sarabun', 'Tahoma', sans-serif;
-    background-color: #f4f6f8; /* สีพื้นหลังขาวอมเทานุ่มตา */
+    background-color: #f4f6f8;
     color: #2c3e50;
     line-height: 1.7;
 }
@@ -42,10 +42,10 @@ body {
     box-shadow: inset 0 -2px 0 #ffffff;
 }
 
-/* พื้นที่แสดงเนื้อหาหลัก (ขยายให้พอดีกับหน้าจอคอมพิวเตอร์) */
+/* พื้นที่แสดงเนื้อหาหลัก */
 .page-container {
     width: 90%;
-    max-width: 850px; /* ขยายความกว้างเพิ่มขึ้นเพื่อความสมส่วน */
+    max-width: 850px;
     margin: 40px auto;
     padding: 0 10px;
 }
@@ -73,7 +73,7 @@ body {
     border-radius: 2px;
 }
 
-/* กล่องการ์ดเนื้อหาขาวสมส่วน */
+/* กล่องการ์ดเนื้อหา */
 .profile-card, .content-card, .contact-box {
     background: #ffffff;
     border-radius: 12px;
@@ -83,25 +83,16 @@ body {
     border-top: 5px solid #AC3520;
 }
 
-/* สำหรับข้อความในคำนำ ประวัติการศึกษา และความสนใจ */
-.content-card p {
-    font-size: 18px;
-    color: #333333;
-    text-align: justify;
-    text-indent: 2.5em;
-    line-height: 1.8;
-}
-
 .content-card h3 {
     font-size: 20px;
     color: #AC3520;
     margin-bottom: 12px;
 }
 
-/* การจัดวางรูปภาพโปรไฟล์และภาพกิจกรรม */
+/* การจัดวางรูปภาพโปรไฟล์และภาพกิจกรรมทั่วไป */
 .profile-img, .content-img {
     width: 100%;
-    max-width: 360px; /* ขนาดรูปกำลังพอดี ไม่ใหญ่ไม่เล็กเกินไป */
+    max-width: 360px;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
@@ -164,6 +155,81 @@ ul li::before {
     text-decoration: underline;
 }
 
+/* ==========================================
+   ส่วนจัดแต่งเนื้อหาหน้าความสนใจในการศึกษาต่อ
+   ========================================== */
+
+/* จัดข้อความในกรอบแรกให้อยู่ตรงกลาง */
+.interest-paragraph {
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    text-indent: 0;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* จัดกึ่งกลางสำหรับกรอบเป้าหมายการศึกษา */
+.target-card-center {
+    text-align: center;
+}
+
+.target-card-center h3 {
+    font-size: 22px;
+    color: #AC3520;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ปรับขนาดตรามหาวิทยาลัยให้อยู่ตรงกลาง ขนาดกำลังดี */
+.university-logo-center {
+    width: 130px !important;
+    max-width: 130px !important;
+    height: auto !important;
+    object-fit: contain;
+    display: block !important;
+    margin: 0 auto 20px auto !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+/* กลุ่มข้อความเป้าหมาย คณะ สาขา มหาวิทยาลัย จัดกึ่งกลาง */
+.target-text-group {
+    text-align: center !important;
+    text-indent: 0 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+.target-text-group .faculty-name,
+.target-card-center .faculty-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.target-text-group .department-name,
+.target-card-center .department-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #AC3520;
+    display: block;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.target-text-group .university-name,
+.target-card-center .university-name {
+    font-size: 16px;
+    color: #555555;
+    display: block;
+    text-align: center;
+}
+
 /* Responsive สำหรับมือถือ */
 @media (max-width: 600px) {
     .page-container {
@@ -176,236 +242,20 @@ ul li::before {
     .heading {
         font-size: 24px;
     }
-    .content-card p {
+    .interest-paragraph {
         font-size: 16px;
     }
-
-/* ==========================================
-   สไตล์กรอบเป้าหมายการศึกษาแบบจัดกึ่งกลาง
-   ========================================== */
-
-/* ข้อความในกรอบแรก */
-.interest-paragraph {
-    font-size: 18px;
-    color: #333333;
-    text-align: justify;
-    text-indent: 2.5em;
-    line-height: 1.8;
-    margin: 0;
-}
-
-/* กรอบแยกเป้าหมายการศึกษา */
-.target-card-center {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    border-top: 5px solid #AC3520;
-    text-align: center; /* จัดเนื้อหาทั้งหมดตรงกลาง */
-}
-
-.target-card-center h3 {
-    font-size: 20px;
-    color: #AC3520;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* ตรามหาวิทยาลัยอยู่ตรงกลาง */
-.university-logo-center {
-    width: 110px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 15px auto;
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
-}
-
-/* ลำดับข้อความ คณะ สาขา มหาลัย */
-.target-card-center .faculty-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 4px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .department-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #AC3520;
-    margin-bottom: 6px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .university-name {
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 0;
-    text-indent: 0 !important;
-}
-
-/* รองรับมือถือ */
-@media (max-width: 600px) {
     .target-card-center {
         padding: 20px 15px;
     }
     .university-logo-center {
-        width: 70px;
-        height: auto;
-        object-fit: contain;
-        display: block;
-        margin: 0 auto 15px auto;
-        filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
-}
-
-/* รองรับหน้าจอมือถือ */
-@media (max-width: 600px) {
-    .university-logo-center {
-        width: 55px; /* ขนาดรูปในมือถือ */
-    }
-}
+        width: 100px !important;
+        max-width: 100px !important;
     }
     .target-card-center .faculty-name {
         font-size: 18px;
     }
     .target-card-center .department-name {
         font-size: 16px;
-    }
-}
-/* ==========================================
-   แก้ไขกรอบเป้าหมายและการคุมขนาดรูปภาพ
-   ========================================== */
-
-.interest-paragraph {
-    font-size: 18px;
-    color: #333333;
-    text-align: justify;
-    text-indent: 2.5em;
-    line-height: 1.8;
-    margin: 0;
-}
-
-/* จัดองค์ประกอบกรอบเป้าหมายให้อยู่ตรงกลาง */
-.target-card-center {
-    text-align: center !important;
-}
-
-.target-card-center h3 {
-    font-size: 20px;
-    color: #AC3520;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* บังคับขนาดตรามหาวิทยาลัยไม่ให้ขยายล้นจอ */
-.university-logo-center {
-    width: 120px !important;
-    max-width: 120px !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block !important;
-    margin: 0 auto 20px auto !important;
-    box-shadow: none !important; /* ลบเงากรอบสี่เหลี่ยมเดิมออก */
-    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
-}
-
-/* รายละเอียด คณะ สาขา มหาวิทยาลัย */
-.target-card-center .faculty-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 4px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .department-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #AC3520;
-    margin-bottom: 6px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .university-name {
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 0;
-    text-indent: 0 !important;
-}
-
-@media (max-width: 600px) {
-    .university-logo-center {
-        width: 90px !important;
-        max-width: 90px !important;
-    }
-}
-/* ==========================================
-   จัดกึ่งกลางข้อความและย่อขนาดรูปภาพ
-   ========================================== */
-
-/* จัดข้อความในกรอบแรกให้อยู่ตรงกลาง */
-.interest-paragraph {
-    font-size: 18px;
-    color: #333333;
-    text-align: center !important; /* จัดข้อความอยู่ตรงกลาง */
-    text-indent: 0 !important;      /* ยกเลิกการย่อหน้าบรรทัดแรก */
-    line-height: 1.8;
-    margin: 0;
-}
-
-/* จัดองค์ประกอบกรอบเป้าหมายให้อยู่ตรงกลาง */
-.target-card-center {
-    text-align: center !important;
-}
-
-.target-card-center h3 {
-    font-size: 20px;
-    color: #AC3520;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* ปรับรูปตรามหาวิทยาลัยให้เล็กลงและอยู่ตรงกลาง */
-.university-logo-center {
-    width: 80px !important;        /* ขนาดรูปกำลังพอดี (ปรับลด/เพิ่มตัวเลขนี้ได้) */
-    max-width: 80px !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block !important;
-    margin: 0 auto 15px auto !important;
-    box-shadow: none !important;    /* ลบกรอบเงาสี่เหลี่ยมของรูปภาพ */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-
-/* ข้อความรายละเอียด คณะ สาขา มหาวิทยาลัย จัดตรงกลาง */
-.target-card-center .faculty-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 4px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .department-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #AC3520;
-    margin-bottom: 6px;
-    text-indent: 0 !important;
-}
-
-.target-card-center .university-name {
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 0;
-    text-indent: 0 !important;
-}
-
-@media (max-width: 600px) {
-    .university-logo-center {
-        width: 65px !important;
-        max-width: 65px !important;
     }
 }
