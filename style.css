@@ -180,20 +180,20 @@ ul li::before {
         font-size: 16px;
     }
 
-  /* ==========================================
-   ส่วนตกแต่งเพิ่มเติมสำหรับหน้า "ความสนใจในการศึกษาต่อ"
+ /* ==========================================
+   ส่วนจัดระเบียบหน้า ความสนใจในการศึกษาต่อ
    ========================================== */
 
-.interest-text {
-    margin-bottom: 30px;
+.interest-paragraph {
     font-size: 18px;
     color: #333333;
     text-align: justify;
     text-indent: 2.5em;
     line-height: 1.8;
+    margin-bottom: 25px;
 }
 
-/* การ์ดเน้นเป้าหมายด้านล่าง */
+/* การ์ดเป้าหมายการศึกษา */
 .target-card {
     display: flex;
     justify-content: space-between;
@@ -213,9 +213,9 @@ ul li::before {
 }
 
 .target-details h3 {
-    font-size: 15px;
+    font-size: 16px;
     color: #AC3520;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 700;
@@ -225,7 +225,7 @@ ul li::before {
     font-size: 20px;
     font-weight: bold;
     color: #2c3e50;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     text-indent: 0 !important;
 }
 
@@ -250,9 +250,10 @@ ul li::before {
 }
 
 .university-logo {
-    width: 100px;
+    width: 90px;
     height: auto;
     object-fit: contain;
+    display: block;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
 }
 
@@ -262,17 +263,14 @@ ul li::before {
         text-align: center;
         padding: 20px;
     }
-    
     .target-details {
         text-align: center;
     }
-
     .university-logo-box {
         margin-left: 0;
         margin-bottom: 15px;
     }
-    
     .university-logo {
-        width: 80px;
+        width: 75px;
     }
 }
