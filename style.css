@@ -572,3 +572,18 @@ ul li::before {
 .content-card p.foreword-p:last-child {
     margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
 }
+/* บังคับไม่ย่อหน้า และเว้นบรรทัดตรงกลาง */
+.content-card p.foreword-p {
+    display: block !important;
+    font-size: 17px !important;
+    color: #333333 !important;
+    line-height: 1.8 !important;
+    text-indent: 0 !important;          /* ยกเลิกการย่อหน้า */
+    text-align: justify !important;      /* จัดขอบซ้าย-ขวาเท่ากัน */
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;     /* เว้นระยะห่างบรรทัดตรงกลาง */
+}
+
+.content-card p.foreword-p:last-child {
+    margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
+}
