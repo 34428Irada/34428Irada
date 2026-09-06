@@ -673,3 +673,35 @@ ul li::before {
         font-size: 15px !important;
     }
 }
+/* ==========================================
+   จัดแต่งส่วน "จัดทำโดย" ให้อยู่ต่อกันในบรรทัดเดียว (ชิดขวา)
+   ========================================== */
+
+.foreword-author {
+    margin-top: 35px;
+    text-align: right !important;
+}
+
+.foreword-author p {
+    font-size: 17px !important;
+    color: #333333 !important;
+    line-height: 1.6 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+.foreword-author .author-name {
+    font-weight: bold;
+    color: #AC3520 !important; /* สีแดง มจพ. */
+    margin-left: 6px;           /* ระยะห่างระหว่าง "จัดทำโดย" กับชื่อ */
+}
+
+@media (max-width: 600px) {
+    .foreword-author {
+        margin-top: 25px;
+    }
+    .foreword-author p {
+        font-size: 15px !important;
+    }
+}
