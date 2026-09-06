@@ -538,3 +538,22 @@ ul li::before {
         text-indent: 1.8em !important;
     }
 }
+/* ==========================================
+   ข้อความย่อหน้าเดียว ย่อหน้าเฉพาะบรรทัดแรก
+   ========================================== */
+
+.interest-single-p {
+    font-size: 17px;
+    color: #333333;
+    line-height: 1.8;
+    text-indent: 2.5em !important; /* ย่อหน้าเฉพาะบรรทัดแรก */
+    text-align: justify;            /* จัดขอบซ้าย-ขวาเท่ากัน */
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .interest-single-p {
+        font-size: 15px;
+        text-indent: 1.8em !important;
+    }
+}
