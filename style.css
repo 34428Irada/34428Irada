@@ -451,3 +451,41 @@ ul li::before {
         font-size: 15px !important;
     }
 }
+/* ==========================================
+   ส่วน "จัดทำโดย" สีเดียวกันทั้งชุด (ชิดขวา)
+   ========================================== */
+
+.foreword-author {
+    margin-top: 35px;
+    text-align: right !important;
+}
+
+.foreword-author p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* คำว่า "จัดทำโดย" : สีแดง มจพ. + ตัวหนา */
+.foreword-author .author-label {
+    font-weight: 700;
+    color: #AC3520 !important;
+    margin-right: 6px;
+}
+
+/* ชื่อ-นามสกุล : สีแดง มจพ. เดียวกัน + ตัวปกติ */
+.foreword-author .author-name {
+    font-weight: 400;
+    color: #AC3520 !important;
+}
+
+@media (max-width: 600px) {
+    .foreword-author {
+        margin-top: 25px;
+    }
+    .foreword-author p {
+        font-size: 15px !important;
+    }
+}
