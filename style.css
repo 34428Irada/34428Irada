@@ -557,3 +557,18 @@ ul li::before {
         text-indent: 1.8em !important;
     }
 }
+/* บังคับระยะห่างและการย่อหน้าสำหรับหน้าคำนำ */
+.content-card p.foreword-p {
+    display: block !important;
+    font-size: 17px !important;
+    color: #333333 !important;
+    line-height: 1.8 !important;
+    text-indent: 2.5em !important;      /* ย่อหน้าบรรทัดแรก */
+    text-align: justify !important;      /* จัดขอบซ้าย-ขวาให้เรียบเท่ากัน */
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;     /* เว้นระยะห่างบรรทัดตรงกลาง */
+}
+
+.content-card p.foreword-p:last-child {
+    margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
+}
