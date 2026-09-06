@@ -505,3 +505,26 @@ ul li::before {
         margin-bottom: 12px;
     }
 }
+/* ==========================================
+   จัดย่อหน้าข้อความความสนใจในการศึกษาต่อ
+   ========================================== */
+
+.interest-indent-p {
+    font-size: 17px;
+    color: #333333;
+    line-height: 1.8;
+    text-indent: 2.5em !important; /* กำหนดระยะย่อหน้าด้านหน้า */
+    text-align: justify;            /* จัดขอบซ้าย-ขวาให้เรียบเท่ากันสวยงาม */
+    margin-bottom: 16px;            /* เว้นระยะห่างระหว่างย่อหน้า */
+}
+
+.interest-indent-p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .interest-indent-p {
+        font-size: 15px;
+        text-indent: 1.8em !important;
+    }
+}
