@@ -642,3 +642,34 @@ ul li::before {
         font-size: 15px;
     }
 }
+/* ==========================================
+   จัดแต่งส่วน "จัดทำโดย" ในหน้าคำนำ (ชิดขวา)
+   ========================================== */
+
+.foreword-author {
+    margin-top: 35px;
+    text-align: right !important;
+}
+
+.foreword-author p {
+    font-size: 17px !important;
+    color: #333333 !important;
+    line-height: 1.6 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+}
+
+.foreword-author .author-name {
+    font-weight: bold;
+    color: #AC3520 !important; /* ใช้สีแดงแบรนด์ มจพ. เน้นชื่อ */
+    margin-top: 4px !important;
+}
+
+@media (max-width: 600px) {
+    .foreword-author {
+        margin-top: 25px;
+    }
+    .foreword-author p {
+        font-size: 15px !important;
+    }
+}
