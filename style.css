@@ -447,3 +447,27 @@ ul li::before {
         font-size: 16px;
     }
 }
+/* ==========================================
+   จัดแต่งหน้าประวัติการศึกษาให้อยู่บรรทัดเดียวกัน
+   ========================================== */
+
+.edu-card p {
+    font-size: 18px;
+    color: #333333;
+    text-indent: 0 !important; /* ยกเลิกย่อหน้า */
+    margin-bottom: 12px;       /* เว้นระยะห่างระหว่างแต่ละระดับชั้น */
+    line-height: 1.6;
+}
+
+.edu-card .edu-level {
+    font-weight: bold;
+    color: #AC3520;           /* สีแดง มจพ. สำหรับชื่อระดับชั้น */
+}
+
+/* รองรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .edu-card p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
