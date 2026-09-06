@@ -587,3 +587,58 @@ ul li::before {
 .content-card p.foreword-p:last-child {
     margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
 }
+/* ==========================================
+   สไตล์การ์ดแสดงรูปเกียรติบัตร/กิจกรรม
+   ========================================== */
+
+.activity-card {
+    text-align: center !important;
+    padding: 30px 25px !important;
+    margin-bottom: 25px;
+}
+
+/* กรอบครอบรูปเกียรติบัตร */
+.activity-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* รูปเกียรติบัตรปรับขนาดพอดี มีย่อมุมและเงา */
+.activity-img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.activity-img:hover {
+    transform: scale(1.02); /* ขยายรูปเล็กน้อยเมื่อชี้เม้าส์ */
+}
+
+/* ข้อความอธิบายใต้รูป */
+.activity-desc {
+    font-size: 17px;
+    color: #333333;
+    line-height: 1.6;
+    text-indent: 0 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    font-weight: 500;
+}
+
+/* รองรับการแสดงผลบนหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .activity-card {
+        padding: 20px 15px !important;
+    }
+    .activity-img {
+        max-width: 100%;
+    }
+    .activity-desc {
+        font-size: 15px;
+    }
+}
