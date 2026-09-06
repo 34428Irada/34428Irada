@@ -171,231 +171,6 @@ ul li::before {
 
 /* จัดกึ่งกลางสำหรับกรอบเป้าหมายการศึกษา */
 .target-card-center {
-    text-align: center;
-}
-
-.target-card-center h3 {
-    font-size: 22px;
-    color: #AC3520;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* ปรับขนาดตรามหาวิทยาลัยให้อยู่ตรงกลาง ขนาดกำลังดี */
-.university-logo-center {
-    width: 130px !important;
-    max-width: 130px !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block !important;
-    margin: 0 auto 20px auto !important;
-    box-shadow: none !important;
-    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
-}
-
-/* กลุ่มข้อความเป้าหมาย คณะ สาขา มหาวิทยาลัย จัดกึ่งกลาง */
-.target-text-group {
-    text-align: center !important;
-    text-indent: 0 !important;
-    line-height: 1.6 !important;
-    margin: 0 !important;
-}
-
-.target-text-group .faculty-name,
-.target-card-center .faculty-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-    text-align: center;
-}
-
-.target-text-group .department-name,
-.target-card-center .department-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: #AC3520;
-    display: block;
-    margin-bottom: 6px;
-    text-align: center;
-}
-
-.target-text-group .university-name,
-.target-card-center .university-name {
-    font-size: 16px;
-    color: #555555;
-    display: block;
-    text-align: center;
-}
-
-/* Responsive สำหรับมือถือ */
-@media (max-width: 600px) {
-    .page-container {
-        width: 95%;
-        margin: 20px auto;
-    }
-    .profile-card, .content-card, .contact-box {
-        padding: 20px 25px;
-    }
-    .heading {
-        font-size: 24px;
-    }
-    .interest-paragraph {
-        font-size: 16px;
-    }
-    .target-card-center {
-        padding: 20px 15px;
-    }
-    .university-logo-center {
-        width: 100px !important;
-        max-width: 100px !important;
-    }
-    .target-card-center .faculty-name {
-        font-size: 18px;
-    }
-    .target-card-center .department-name {
-        font-size: 16px;
-    }
-}
-/* ==========================================
-   ขยายรูปตรา + จัดข้อความคณะ/สาขา/มหาลัย ชิดต่อกัน
-   ========================================== */
-
-.target-card-center {
-    text-align: center !important;
-}
-
-.target-card-center h3 {
-    font-size: 24px;
-    color: #AC3520;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center !important;
-}
-
-/* ขยายขนาดตรามหาวิทยาลัยให้ใหญ่ชัดเจน */
-.university-logo-center {
-    width: 220px !important;
-    max-width: 220px !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block !important;
-    margin: 0 auto 15px auto !important;
-    box-shadow: none !important;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
-}
-
-/* กลุ่มข้อความเป้าหมาย จัดตรงกลาง และต่อกันกระชับ */
-.target-text-group {
-    text-align: center !important;
-    text-indent: 0 !important;
-    line-height: 1.3 !important; /* ลดระยะห่างบรรทัดให้ชิดกัน */
-    margin: 0 !important;
-}
-
-.target-text-group .faculty-name {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.target-text-group .department-name {
-    font-size: 20px;
-    font-weight: 600;
-    color: #AC3520;
-}
-
-.target-text-group .university-name {
-    font-size: 18px;
-    color: #555555;
-}
-
-@media (max-width: 600px) {
-    .university-logo-center {
-        width: 160px !important;
-        max-width: 160px !important;
-    }
-    .target-text-group .faculty-name { font-size: 19px; }
-    .target-text-group .department-name { font-size: 17px; }
-    .target-text-group .university-name { font-size: 15px; }
-}
-/* ==========================================
-   จัดข้อความเป้าหมายการศึกษาให้อยู่บรรทัดเดียวกัน
-   ========================================== */
-
-.target-card-center {
-    text-align: center !important;
-}
-
-.target-card-center h3 {
-    font-size: 24px;
-    color: #AC3520;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center !important;
-}
-
-/* ขนาดตรามหาวิทยาลัยใหญ่ชัดเจน */
-.university-logo-center {
-    width: 200px !important;
-    max-width: 200px !important;
-    height: auto !important;
-    object-fit: contain;
-    display: block !important;
-    margin: 0 auto 20px auto !important;
-    box-shadow: none !important;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
-}
-
-/* ข้อความ คณะ สาขา มหาลัย อยู่บรรทัดเดียวกันแบบ inline */
-.target-text-single-line {
-    text-align: center !important;
-    text-indent: 0 !important;
-    line-height: 1.8 !important;
-    margin: 0 !important;
-}
-
-.target-text-single-line .faculty-name {
-    font-size: 19px;
-    font-weight: bold;
-    color: #2c3e50;
-    display: inline;
-    margin-right: 8px;
-}
-
-.target-text-single-line .department-name {
-    font-size: 19px;
-    font-weight: 600;
-    color: #AC3520;
-    display: inline;
-    margin-right: 8px;
-}
-
-.target-text-single-line .university-name {
-    font-size: 18px;
-    color: #555555;
-    display: inline;
-}
-
-/* รองรับมือถือ (หากหน้าจอแคบ ข้อความจะตัดบรรทัดให้อัตโนมัติอย่างสมส่วน) */
-@media (max-width: 768px) {
-    .university-logo-center {
-        width: 150px !important;
-        max-width: 150px !important;
-    }
-    .target-text-single-line .faculty-name,
-    .target-text-single-line .department-name,
-    .target-text-single-line .university-name {
-        font-size: 16px;
-    }
-}
-/* ==========================================
-   จัดข้อความ คณะ + สาขา บรรทัดเดียวกัน สีเดียวกัน
-   ========================================== */
-
-.target-card-center {
     text-align: center !important;
 }
 
@@ -419,6 +194,31 @@ ul li::before {
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
 }
 
+/* กลุ่มข้อความเป้าหมาย จัดตรงกลาง และต่อกันกระชับ */
+.target-text-group {
+    text-align: center !important;
+    text-indent: 0 !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+}
+
+.target-text-group .faculty-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.target-text-group .department-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #AC3520;
+}
+
+.target-text-group .university-name {
+    font-size: 18px;
+    color: #555555;
+}
+
 /* แสดง คณะ และ สาขา เป็นสีแดง มจพ. เดียวกัน อยู่บรรทัดเดียวกัน */
 .target-text-single-line {
     text-align: center !important;
@@ -436,43 +236,14 @@ ul li::before {
     margin-right: 8px;
 }
 
-/* Responsive สำหรับมือถือ */
-@media (max-width: 768px) {
-    .university-logo-center {
-        width: 150px !important;
-        max-width: 150px !important;
-    }
-    .target-text-single-line .faculty-name,
-    .target-text-single-line .department-name {
-        font-size: 16px;
-    }
-}
-/* ==========================================
-   จัดแต่งหน้าประวัติการศึกษาให้อยู่บรรทัดเดียวกัน
-   ========================================== */
-
-.edu-card p {
+.target-text-single-line .university-name {
     font-size: 18px;
-    color: #333333;
-    text-indent: 0 !important; /* ยกเลิกย่อหน้า */
-    margin-bottom: 12px;       /* เว้นระยะห่างระหว่างแต่ละระดับชั้น */
-    line-height: 1.6;
+    color: #555555;
+    display: inline;
 }
 
-.edu-card .edu-level {
-    font-weight: bold;
-    color: #AC3520;           /* สีแดง มจพ. สำหรับชื่อระดับชั้น */
-}
-
-/* รองรับหน้าจอมือถือ */
-@media (max-width: 600px) {
-    .edu-card p {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-}
 /* ==========================================
-   เน้นความแตกต่างระหว่างระดับชั้นและชื่อโรงเรียน
+   จัดแต่งหน้าประวัติการศึกษา
    ========================================== */
 
 .edu-card p {
@@ -499,94 +270,53 @@ ul li::before {
     color: #444444;
 }
 
-@media (max-width: 600px) {
-    .edu-card p {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-}
 /* ==========================================
-   ย่อหน้าเฉพาะข้อความแรกเท่านั้น
+   สไตล์การย่อหน้าข้อความ
    ========================================== */
 
-/* ข้อความบรรทัดแรก: มีย่อหน้า (Indent) */
 .interest-indent-first {
     font-size: 17px;
     color: #333333;
     line-height: 1.8;
-    text-indent: 2.5em !important; /* กำหนดระยะย่อหน้า */
+    text-indent: 2.5em !important;
     text-align: justify;
     margin-bottom: 16px;
 }
 
-/* ข้อความบรรทัดสอง: ไม่มีย่อหน้า ชิดซ้ายตามปกติ */
 .interest-normal-p {
     font-size: 17px;
     color: #333333;
     line-height: 1.8;
-    text-indent: 0 !important; /* ยกเลิกย่อหน้า */
+    text-indent: 0 !important;
     text-align: justify;
     margin-bottom: 0;
 }
-
-@media (max-width: 600px) {
-    .interest-indent-first,
-    .interest-normal-p {
-        font-size: 15px;
-    }
-    .interest-indent-first {
-        text-indent: 1.8em !important;
-    }
-}
-/* ==========================================
-   ข้อความย่อหน้าเดียว ย่อหน้าเฉพาะบรรทัดแรก
-   ========================================== */
 
 .interest-single-p {
     font-size: 17px;
     color: #333333;
     line-height: 1.8;
-    text-indent: 2.5em !important; /* ย่อหน้าเฉพาะบรรทัดแรก */
-    text-align: justify;            /* จัดขอบซ้าย-ขวาเท่ากัน */
+    text-indent: 2.5em !important;
+    text-align: justify;
     margin: 0;
 }
 
-@media (max-width: 600px) {
-    .interest-single-p {
-        font-size: 15px;
-        text-indent: 1.8em !important;
-    }
-}
-/* บังคับระยะห่างและการย่อหน้าสำหรับหน้าคำนำ */
+/* สไตล์สำหรับหน้าคำนำ */
 .content-card p.foreword-p {
     display: block !important;
     font-size: 17px !important;
     color: #333333 !important;
     line-height: 1.8 !important;
-    text-indent: 2.5em !important;      /* ย่อหน้าบรรทัดแรก */
-    text-align: justify !important;      /* จัดขอบซ้าย-ขวาให้เรียบเท่ากัน */
+    text-indent: 0 !important;
+    text-align: justify !important;
     margin-top: 0 !important;
-    margin-bottom: 24px !important;     /* เว้นระยะห่างบรรทัดตรงกลาง */
+    margin-bottom: 24px !important;
 }
 
 .content-card p.foreword-p:last-child {
-    margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
-}
-/* บังคับไม่ย่อหน้า และเว้นบรรทัดตรงกลาง */
-.content-card p.foreword-p {
-    display: block !important;
-    font-size: 17px !important;
-    color: #333333 !important;
-    line-height: 1.8 !important;
-    text-indent: 0 !important;          /* ยกเลิกการย่อหน้า */
-    text-align: justify !important;      /* จัดขอบซ้าย-ขวาเท่ากัน */
-    margin-top: 0 !important;
-    margin-bottom: 24px !important;     /* เว้นระยะห่างบรรทัดตรงกลาง */
+    margin-bottom: 0 !important;
 }
 
-.content-card p.foreword-p:last-child {
-    margin-bottom: 0 !important;        /* ย่อหน้าสุดท้ายไม่ต้องเว้นล่าง */
-}
 /* ==========================================
    สไตล์การ์ดแสดงรูปเกียรติบัตร/กิจกรรม
    ========================================== */
@@ -597,7 +327,6 @@ ul li::before {
     margin-bottom: 25px;
 }
 
-/* กรอบครอบรูปเกียรติบัตร */
 .activity-img-wrapper {
     display: flex;
     justify-content: center;
@@ -605,7 +334,6 @@ ul li::before {
     margin-bottom: 20px;
 }
 
-/* รูปเกียรติบัตรปรับขนาดพอดี มีย่อมุมและเงา */
 .activity-img {
     max-width: 450px;
     width: 100%;
@@ -616,10 +344,9 @@ ul li::before {
 }
 
 .activity-img:hover {
-    transform: scale(1.02); /* ขยายรูปเล็กน้อยเมื่อชี้เม้าส์ */
+    transform: scale(1.02);
 }
 
-/* ข้อความอธิบายใต้รูป */
 .activity-desc {
     font-size: 17px;
     color: #333333;
@@ -630,8 +357,84 @@ ul li::before {
     font-weight: 500;
 }
 
-/* รองรับการแสดงผลบนหน้าจอมือถือ */
+/* ==========================================
+   ส่วน "จัดทำโดย" ในหน้าคำนำ (หน้าเข้ม - หลังอ่อน)
+   ========================================== */
+
+.foreword-author {
+    margin-top: 35px;
+    text-align: right !important;
+}
+
+.foreword-author p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+/* หน้าเข้ม: จัดทำโดย (ตัวหนาสีเทาเข้ม) */
+.foreword-author .author-label {
+    font-weight: 700;
+    color: #222222 !important;
+    margin-right: 6px;
+}
+
+/* หลังอ่อน: ชื่อ-นามสกุล (สีแดงสว่างขึ้น) */
+.foreword-author .author-name {
+    font-weight: 500;
+    color: #C0392B !important;
+}
+
+/* ==========================================
+   Responsive สำหรับหน้าจอมือถือ/แท็บเล็ต
+   ========================================== */
+
+@media (max-width: 768px) {
+    .university-logo-center {
+        width: 150px !important;
+        max-width: 150px !important;
+    }
+    .target-text-single-line .faculty-name,
+    .target-text-single-line .department-name {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 600px) {
+    .page-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .profile-card, .content-card, .contact-box {
+        padding: 20px 25px;
+    }
+    .heading {
+        font-size: 24px;
+    }
+    .interest-paragraph {
+        font-size: 16px;
+    }
+    .target-card-center {
+        padding: 20px 15px;
+    }
+    .target-text-group .faculty-name { font-size: 19px; }
+    .target-text-group .department-name { font-size: 17px; }
+    .target-text-group .university-name { font-size: 15px; }
+    .edu-card p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .interest-indent-first,
+    .interest-normal-p,
+    .interest-single-p {
+        font-size: 15px;
+    }
+    .interest-indent-first,
+    .interest-single-p {
+        text-indent: 1.8em !important;
+    }
     .activity-card {
         padding: 20px 15px !important;
     }
@@ -641,63 +444,6 @@ ul li::before {
     .activity-desc {
         font-size: 15px;
     }
-}
-/* ==========================================
-   จัดแต่งส่วน "จัดทำโดย" ในหน้าคำนำ (ชิดขวา)
-   ========================================== */
-
-.foreword-author {
-    margin-top: 35px;
-    text-align: right !important;
-}
-
-.foreword-author p {
-    font-size: 17px !important;
-    color: #333333 !important;
-    line-height: 1.6 !important;
-    text-indent: 0 !important;
-    margin: 0 !important;
-}
-
-.foreword-author .author-name {
-    font-weight: bold;
-    color: #AC3520 !important; /* ใช้สีแดงแบรนด์ มจพ. เน้นชื่อ */
-    margin-top: 4px !important;
-}
-
-@media (max-width: 600px) {
-    .foreword-author {
-        margin-top: 25px;
-    }
-    .foreword-author p {
-        font-size: 15px !important;
-    }
-}
-/* ==========================================
-   จัดแต่งส่วน "จัดทำโดย" ให้อยู่ต่อกันในบรรทัดเดียว (ชิดขวา)
-   ========================================== */
-
-.foreword-author {
-    margin-top: 35px;
-    text-align: right !important;
-}
-
-.foreword-author p {
-    font-size: 17px !important;
-    color: #333333 !important;
-    line-height: 1.6 !important;
-    text-indent: 0 !important;
-    margin: 0 !important;
-    display: block !important;
-}
-
-.foreword-author .author-name {
-    font-weight: bold;
-    color: #AC3520 !important; /* สีแดง มจพ. */
-    margin-left: 6px;           /* ระยะห่างระหว่าง "จัดทำโดย" กับชื่อ */
-}
-
-@media (max-width: 600px) {
     .foreword-author {
         margin-top: 25px;
     }
