@@ -471,3 +471,37 @@ ul li::before {
         margin-bottom: 10px;
     }
 }
+/* ==========================================
+   เน้นความแตกต่างระหว่างระดับชั้นและชื่อโรงเรียน
+   ========================================== */
+
+.edu-card p {
+    font-size: 18px;
+    text-indent: 0 !important;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ข้างหน้า: ระดับชั้น (สีแดงแบรนด์ + ตัวหนา) */
+.edu-card .edu-level {
+    font-weight: 700;
+    color: #AC3520 !important;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+/* ข้างหลัง: ชื่อโรงเรียน (สีเทาเข้ม + ตัวธรรมดา) */
+.edu-card .school-name {
+    font-weight: 400;
+    color: #444444;
+}
+
+@media (max-width: 600px) {
+    .edu-card p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}
