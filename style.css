@@ -489,3 +489,61 @@ ul li::before {
         font-size: 15px !important;
     }
 }
+/* ==========================================
+   จัดแต่งการ์ดและรูปภาพในหน้าทักษะ (skills.html)
+   ========================================== */
+
+.skill-card {
+    text-align: center !important;
+    padding: 30px 25px !important;
+    margin-bottom: 25px;
+}
+
+.skill-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #AC3520 !important; /* สีแดงแบรนด์ มจพ. */
+    margin-bottom: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+/* จุดสัญลักษณ์สีแดงหน้าหัวข้อทักษะ */
+.skill-title::before {
+    content: "•";
+    color: #AC3520;
+    font-size: 26px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.skill-img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .skill-card {
+        padding: 20px 15px !important;
+    }
+    .skill-title {
+        font-size: 18px;
+    }
+    .skill-img {
+        max-width: 100%;
+    }
+}
