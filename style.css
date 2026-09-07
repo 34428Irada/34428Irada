@@ -888,3 +888,24 @@ ul li::before {
         height: 220px;
     }
 }
+/* ==========================================
+   ส่วนจัดระเบียบรูปภาพหน้าคำนำ
+   ========================================== */
+
+.foreword-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* ระยะห่างจากชื่อผู้จัดทำด้านบน */
+    width: 100%;
+}
+
+.foreword-img {
+    width: 100%;
+    max-width: 400px; /* ปรับขนาดความกว้างสูงสุดตามต้องการ */
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 12px; /* ทำมุมโค้งมน */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* เพิ่มเงาให้นุ่มนวล */
+}
