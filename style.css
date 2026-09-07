@@ -795,3 +795,96 @@ ul li::before {
         height: 70px;
     }
 }
+/* ==========================================
+   จัดหน้าทักษะแบบเรียงลงมาทีละแถว (Vertical List)
+   ========================================== */
+
+/* การ์ดหลักคลุมทั้งหมด */
+.skills-single-card {
+    padding: 40px !important;
+    max-width: 800px; /* จำกัดความกว้างการ์ดให้ดูพอดี ไม่กว้างเกินไป */
+    margin: 0 auto;
+    overflow: hidden !important;
+}
+
+/* แต่ละรายการทักษะ เรียงต่อกันลงมา */
+.skill-item {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+/* หัวข้อทักษะชิดซ้าย พร้อมจุดสีแดง */
+.skill-item .skill-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #AC3520 !important;
+    text-align: left !important;
+    margin-bottom: 16px;
+    display: block;
+    position: relative;
+    padding-left: 22px;
+}
+
+.skill-item .skill-title::before {
+    content: "•";
+    color: #AC3520;
+    font-size: 26px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+/* --- จัดการรูปภาพแบบ 4 รูป (บน 2 ล่าง 2) --- */
+.skill-img-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ */
+    gap: 12px;
+    width: 100%;
+    max-width: 600px; /* คุมไม่ให้กว้างเกินไป */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+}
+
+.skill-img-grid-4 .skill-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- จัดการรูปภาพเดี่ยว --- */
+.skill-item .skill-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.skill-item .skill-img-wrapper .skill-img {
+    width: 100%;
+    max-width: 550px; /* ขนาดรูปภาพเดี่ยวพอดีสายตา */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive สำหรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    .skills-single-card {
+        padding: 25px 20px !important;
+    }
+    .skill-img-grid-4 {
+        gap: 8px;
+    }
+    .skill-img-grid-4 .skill-img {
+        height: 120px;
+    }
+    .skill-item .skill-img-wrapper .skill-img {
+        height: 220px;
+    }
+}
